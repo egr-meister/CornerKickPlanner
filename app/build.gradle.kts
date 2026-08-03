@@ -38,11 +38,11 @@ val footballApiBaseUrl: String = readProp("FOOTBALL_API_BASE_URL", "https://api.
 // ---------------------------------------------------------------------------
 val keystoreFilePath: String? = System.getenv("ANDROID_KEYSTORE_FILE")
 val keystorePassword: String? = System.getenv("ANDROID_KEYSTORE_PASSWORD")
-val keyAlias: String? = System.getenv("ANDROID_KEY_ALIAS")
+val keyAliasEnv: String? = System.getenv("ANDROID_KEY_ALIAS")
 val keyPasswordEnv: String? = System.getenv("ANDROID_KEY_PASSWORD")
 val hasReleaseSigning: Boolean =
     keystoreFilePath != null && file(keystoreFilePath).exists() &&
-        keystorePassword != null && keyAlias != null && keyPasswordEnv != null
+        keystorePassword != null && keyAliasEnv != null && keyPasswordEnv != null
 
 android {
     namespace = "com.cornerkick.planner"
@@ -69,7 +69,7 @@ android {
             create("release") {
                 storeFile = file(keystoreFilePath!!)
                 storePassword = keystorePassword
-                this.keyAlias = keyAlias
+                keyAlias = keyAliasEnv
                 keyPassword = keyPasswordEnv
                 // PKCS12 keystore.
                 storeType = "PKCS12"

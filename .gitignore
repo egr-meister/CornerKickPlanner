@@ -1,0 +1,27 @@
+# Secrets — never commit the real API token or keystore
+local.properties
+*.p12
+*.jks
+*.keystore
+keystore.properties
+
+# Android / Gradle build output
+*.iml
+.gradle/
+/local.properties
+.idea/
+.DS_Store
+/build
+/captures
+app/build/
+build/
+.externalNativeBuild
+.cxx
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+
+# Keystore decoded in CI
+release-keystore.p12

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Allow the DataStore preferences file to be included in device backups.
+     Only local app data is stored; no secrets or credentials are kept here. -->
+<full-backup-content>
+    <include domain="file" path="datastore/" />
+</full-backup-content>

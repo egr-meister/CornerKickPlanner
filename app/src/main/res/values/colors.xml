@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="strong_orange">#F7931A</color>
+    <color name="deep_charcoal">#111111</color>
+    <color name="dark_section">#101010</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <!-- Fallback background behind the masked corners of the adaptive icon,
+         matched to the logo's deep-orange smoke so edges blend cleanly. -->
+    <color name="ic_launcher_bg">#BA3101</color>
+</resources>
